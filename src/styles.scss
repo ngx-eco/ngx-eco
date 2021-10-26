@@ -1,4 +1,10 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
-@import 'normalize.css';
-@import 'reset-css/sass/reset';
+@import '~normalize.css';
+@import '~reset-css/sass/reset';
+
+// fonts
+
+@import 'styles/fonts/roboto';
+@import 'styles/fonts/rubik';
+
