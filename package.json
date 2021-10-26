@@ -29,6 +29,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-inline-svg": "^13.1.0",
     "normalize.css": "^8.0.1",
     "reset-css": "^5.0.1",
     "rxjs": "~6.6.0",
