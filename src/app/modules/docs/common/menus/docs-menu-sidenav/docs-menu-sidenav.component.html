@@ -1,0 +1,77 @@
+<div class="menu">
+
+  <header class="menu__header">
+    <div class="menu__header__logo">LOGO</div>
+    <div class="menu__header__text">Ngx-eco</div>
+  </header>
+
+  <div class="menu__tap-bar">
+    <button
+      routerLink="/"
+      class="menu__tap-bar__button">
+      <div
+        class="menu__tap-bar__icon"
+        [inlineSVG]="'/assets/icons/outline/home.svg'">
+      </div>
+      Home
+    </button>
+    <button
+      routerLink="/docs"
+      class="menu__tap-bar__button"
+      [routerLinkActiveOptions]="{exact: true}"
+      routerLinkActive="menu__tap-bar__button--active">
+      <div
+        class="menu__tap-bar__icon"
+        [inlineSVG]="'/assets/icons/outline/document-text.svg'">
+      </div>
+      Docs
+    </button>
+  </div>
+
+  <div class="menu__sep"></div>
+
+  <div
+    class="menu__items"
+    *ngFor="let item of docsMenu.menu">
+
+    <div
+      class="menu__item__header"
+      *ngIf="item.header && !item.children">
+      {{item.text}}
+    </div>
+
+    <button
+      class="menu__item"
+      [routerLink]="item.url"
+      *ngIf="!item.header && !item.children">
+      {{item.text}}
+    </button>
+
+    <button
+      [routerLink]="item.url"
+      class="menu__item__group"
+      *ngIf="!item.header && item.children">
+      {{item.text}}
+    </button>
+
+    <ng-container>
+      <div
+        class="menu__sub-items"
+        *ngFor="let subItem of item.children">
+        <div
+          class="menu__sub-item__header"
+          *ngIf="subItem.header && !subItem.children">
+          {{subItem.text}}
+        </div>
+        <button
+          class="menu__sub-item"
+          [routerLink]="subItem.url"
+          *ngIf="!subItem.header && !subItem.children">
+          {{subItem.text}}
+        </button>
+      </div>
+    </ng-container>
+
+  </div>
+
+</div>

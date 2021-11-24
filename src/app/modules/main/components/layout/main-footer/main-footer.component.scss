@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #dddddd;
+
+  &__copyright {
+    font-weight: 600;
+    color: #333333;
+  }
+
+  &__buttons {
+  }
+
+  &__button {
+    font-size: 18px;
+    background: #dddddd60;
+    padding: 8px 16px;
+    border-radius: 50px;
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      background: #ddddee90;
+    }
+  }
+}

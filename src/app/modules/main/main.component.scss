@@ -1,0 +1,10 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__content {
+    flex: 1 1 100%;
+  }
+}
